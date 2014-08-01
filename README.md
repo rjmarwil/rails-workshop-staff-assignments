@@ -36,7 +36,7 @@ Users must enter either a title/last_name or a first_name/last_name
 Otherwise they get a validation message and the person isn't saved
 ```
 
-**Users can assign users to locations**
+**Users can assign people to locations**
 
 ```
 Go to person show page

@@ -1,24 +1,26 @@
-<h1>Add a Staff Member</h1>
+<div class="page-header">
+  <h1>Add a Staff Member</h1>
+</div>
 
 <%= form_for @person do |f| %>
 
-  <div class="form-row">
+  <div class="form-group">
     <%= f.label :title %>
-    <%= f.text_field :title, autofocus: true, placeholder: "i.e. Dr." %>
+    <%= f.text_field :title, autofocus: true, placeholder: "i.e. Dr.", class: "form-control" %>
   </div>
 
-  <div class="form-row">
+  <div class="form-group">
     <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
+    <%= f.text_field :first_name, class: "form-control" %>
   </div>
 
-  <div class="form-row">
+  <div class="form-group">
     <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
+    <%= f.text_field :last_name, class: "form-control" %>
   </div>
 
-  <div class="form-row">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit class: "btn btn-primary" %>
   </div>
 
 <% end %>

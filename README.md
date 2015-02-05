@@ -2,15 +2,13 @@
 
 ## Setup
 
-* `bundle`
-* `rake db:create db:migrate db:seed`
-* `rails s`
+* `bin/setup`
 
 You can run specs with:
 
 * `rspec`
 
-Note: email/password combinations for existing users populated by `rake db:seed` can be found in the db/seeds.rb file.
+Note: email/password combinations for existing users populated by `bin/setup` can be found in the db/seeds.rb file.
 
 ## Stories
 
@@ -25,7 +23,7 @@ Clicking link brings users to show page
 
 ```
 From the person show page
-Users should be abel to click an edit link and see the edit form for a person 
+Users should be abel to click an edit link and see the edit form for a person
 ```
 
 **Users must enter a title/last_name or first_name/last_name**

@@ -1,18 +1,26 @@
-<%= form_for @user, url: signin_path, html: { class: "signin-form" } do |f| %>
-  <% f.object.errors.full_messages.each do |error| %>
-    <div class="errors">
-      <%= error %>
-    </div>
-  <% end %>
-  <div>
-    <%= f.label :email %>
-    <%= f.email_field :email, autofocus: true %>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <%= form_for @user, url: signin_path, html: {class: "well"} do |f| %>
+      <% f.object.errors.full_messages.each do |error| %>
+      <div class="form-group">
+        <div class="col-md-12">
+          <div class="alert alert-danger">
+            <%= error %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :password %>
+        <%= f.password_field :password, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.submit "Login", class: "btn btn-primary" %>
+      </div>
+    <% end %>
   </div>
-  <div>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-  <div>
-    <%= f.submit "Login" %>
-  </div>
-<% end %>
+</div>

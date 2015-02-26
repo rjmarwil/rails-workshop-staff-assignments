@@ -31,4 +31,18 @@ class PeopleController < ApplicationController
     redirect_to people_path, notice: 'Person was successfully destroyed.'
   end
 
+  def update
+    if @person.update(person_params)
+      redirect_to people_path, notice: 'Person was successfully updated.'
+    else
+      render :edit
+    end
+  end
+
+  private
+
+  def person_params
+    params.require(:person).permit(:title, :first_name, :last_name)
+  end
+
 end

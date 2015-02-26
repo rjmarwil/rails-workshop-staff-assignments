@@ -1,0 +1,26 @@
+<div class="page-header">
+  <h1><%= @person.title %> <%= @person.first_name %> <%= @person.last_name %></h1>
+</div>
+
+
+<h2>Assignments</h2>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Location</th>
+    <th>Role</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>...</td>
+      <td>...</td>
+      <td>
+        <%= link_to 'Edit', edit_person_path(@person), class:'btn btn-info' %>
+        <%= link_to 'Delete', person_path(@person), method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger' %>
+      </td>
+    </tr>
+  </tbody>
+</table>

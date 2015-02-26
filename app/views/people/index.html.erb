@@ -9,6 +9,7 @@
   <thead>
   <tr>
     <th>Name</th>
+    <th></th>
   </tr>
   </thead>
   <tbody>
@@ -16,6 +17,10 @@
     <tr>
       <td>
         <%= link_to "#{person.title} #{person.first_name} #{person.last_name}", person %>
+      </td>
+      <td>
+        <%= link_to 'Edit', edit_person_path(person), class:'btn btn-info' %>
+        <%= link_to 'Delete', person_path(person), method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger' %>
       </td>
     </tr>
   <% end %>

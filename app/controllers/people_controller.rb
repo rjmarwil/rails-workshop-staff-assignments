@@ -26,7 +26,9 @@ class PeopleController < ApplicationController
   end
 
   def destroy
-    
+    @person = Person.find(params[:id])
+    @person.destroy
+    redirect_to people_path, notice: 'Person was successfully destroyed.'
   end
 
 end

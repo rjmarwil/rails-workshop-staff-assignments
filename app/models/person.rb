@@ -1,5 +1,12 @@
 class Person < ActiveRecord::Base
 
-  validates (:title && :last_name) || (:first_name && :last_name), presence: true
+  validates :last_name, presence: true
+  validate :fields
+
+  def fields
+    unless title.present? || first_name.present?
+      errors.add(:base, "First name and title cannot be blank")
+    end
+  end
 
 end
